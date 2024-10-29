@@ -1,0 +1,25 @@
+All in one figures
+ *including the txts
+ .include rn142.txt
+
+ *Diode
+ r0  gnd 2 100
+ d0  1 2 DRN142S
+  vin 1 0 dc 0
+ *DC Analysis on source vin, to vary from  to +5V
+ .dc vin 0.01 5 0.01
+ .control
+ run
+ plot -i(vin) vs v(1)-v(2) 
+ plot ln(-i(vin)) vs v(1)-v(2) 
+ set hcopydevtype=postscript
+ hardcopy C:\Users\Public\IdvsVd.ps  -i(vin) vs v(1)-v(2) 
+ set hcopydevtype=postscript
+ hardcopy C:\Users\Public\logIdvsVd.ps ln(-i(vin)) vs v(1)-v(2)
+
+ set wr_singlescale
+
+ wrdata C:\Users\Public\output.csv ln(-i(vin)) v(1)-v(2)
+
+ .endc
+ .end

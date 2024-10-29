@@ -1,0 +1,5 @@
+Cut-in voltage: 0.6V
+Ideality factor: -
+     equation of line: ln(I_D)=22.142857142857142 V_D −22.714285714285715
+     coefficient = 22.142857142857142
+     value of ideality factor = 1.73697

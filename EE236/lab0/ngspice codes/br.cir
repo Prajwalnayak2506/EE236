@@ -1,0 +1,14 @@
+Bridge rectifier
+d0 2 1 a
+d1 2 0 a
+d2 1 3 a
+d3 0 3 a
+.model a D()
+r1 2 3 100
+vin 1 0 sin (0 12v 50 0 0)
+.tran 0.01m 100m
+.control
+run
+plot v(3)-v(2) v(1) 
+plot v(3)-v(2) vs v(1) 
+.endc

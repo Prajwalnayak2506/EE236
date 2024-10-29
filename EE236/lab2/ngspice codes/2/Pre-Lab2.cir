@@ -1,0 +1,24 @@
+* Reverse Recovery Time Measurement for RN142 PIN Diode
+
+.include rn142.txt
+
+* Circuit Components
+r1 1 2 10            ; Series resistor (10 ohms)
+v1 1 0 pulse(0 5 0 1n 1n 10n 20n) ; Pulse voltage source: 5V peak, 20ns period
+d1 2 0 DRN142S       ; RN142 PIN diode
+
+* Transient Analysis
+.tran 0.1n 100n      ; 0.1ns time step, 100ns total simulation time
+
+.control
+run
+
+* Plot current through the diode and voltage across the diode
+plot i(v1) v(2)
+
+* Measure reverse recovery time
+* Reverse recovery time is the time it takes for the current to drop to near zero after switching to reverse bias
+.measure tran t_rr time when v(2) = 0.1 cross=1  ; Replace 0.1 with the threshold voltage for reverse recovery time measurement
+
+.endc
+.end
