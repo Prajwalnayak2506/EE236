@@ -1,6 +1,6 @@
 EE236: Electronic Devices Lab
 
-This repository contains lab work completed by Prajwal Nayak, 2B4246 for the EE236 course on Electronic Devices at IIT Bombay. Each lab focuses on different aspects of semiconductor device analysis, circuit simulation, and characterization. The labs utilize tools such as NGSPICE for circuit simulations and NanoHub for device characterization.
+This repository contains lab work completed by Prajwal Nayak, 22B4246 for the EE236 course on Electronic Devices at IIT Bombay. Each lab focuses on different aspects of semiconductor device analysis, circuit simulation, and characterization. The labs utilize tools such as NGSPICE for circuit simulations and NanoHub for device characterization.
 
 **Lab 0:**
 
